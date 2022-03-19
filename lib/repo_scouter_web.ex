@@ -23,6 +23,9 @@ defmodule RepoScouterWeb do
 
       import Plug.Conn
       alias RepoScouterWeb.Router.Helpers, as: Routes
+      alias RepoScouterWeb.Validation.Params
+
+      alias RepoScouter.Facade, as: RepoScouter
     end
   end
 

@@ -5,6 +5,8 @@ defmodule RepoScouter.Repository do
 
   defstruct @keys
 
+  @derive Jason.Encoder
+
   def build(%{"name" => name, "language" => language, "url" => url}) do
     %__MODULE__{
       name: name,

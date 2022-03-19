@@ -7,6 +7,8 @@ defmodule RepoScouterWeb.Router do
 
   scope "/api", RepoScouterWeb do
     pipe_through :api
+
+    get "/repos/:username", ListController, :index
   end
 
   # Enables LiveDashboard only for development
