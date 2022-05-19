@@ -9,7 +9,7 @@ config :repo_scouter, RepoScouter.Repo,
   username: "repo",
   password: "123456789",
   hostname: "localhost",
-  database: "repo_scouter_test#{System.get_env("MIX_TEST_PARTITION")}",
+  database: "repo_scouter#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
