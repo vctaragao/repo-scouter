@@ -1,5 +1,7 @@
-defmodule RepoScouter.GitHubClient do
+defmodule RepoScouter.GithubClient.Client do
   use Tesla
+
+  @behaviour RepoScouter.GithubClient.Behaviour
 
   @base_url "https://api.github.com"
 
