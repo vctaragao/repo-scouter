@@ -1,4 +1,4 @@
-defmodule RepoScouter.Repo.Get do
+defmodule RepoScouter.Repository.Get do
   alias RepoScouter.Repository
 
   def call(%{username: username}) do

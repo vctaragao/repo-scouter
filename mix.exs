@@ -45,7 +45,8 @@ defmodule RepoScouter.MixProject do
       {:tesla, "~> 1.4"},
       {:hackney, "~> 1.17"},
       {:tarams, "~> 1.0.0"},
-      {:mox, "~> 1.0", only: :test}
+      {:mox, "~> 1.0", only: :test},
+      {:elixir_uuid, "~> 1.2"}
     ]
   end
 

@@ -1,6 +1,8 @@
 defmodule RepoScouterWeb.Router do
   use RepoScouterWeb, :router
 
+  alias Controller.User.Create, as: CreateUser
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -8,6 +10,7 @@ defmodule RepoScouterWeb.Router do
   scope "/api", RepoScouterWeb do
     pipe_through :api
 
+    post "/user", CreateUser, :index
     get "/repos/:username", ListController, :index
   end
 

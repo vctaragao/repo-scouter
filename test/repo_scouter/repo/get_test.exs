@@ -1,9 +1,9 @@
-defmodule RepoScouter.Repo.GetTest do
+defmodule RepoScouter.Repository.GetTest do
   use RepoScouter.DataCase, async: true
 
   import Mox
 
-  alias RepoScouter.Repo.Get
+  alias RepoScouter.Repository.Get
   alias RepoScouter.Repository
 
   setup :verify_on_exit!
