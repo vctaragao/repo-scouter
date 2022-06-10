@@ -2,6 +2,8 @@ defmodule RepoScouter.User.Create do
   alias RepoScouter.User
   alias RepoScouter.Repo
 
+  # @To do: formatar senha para salvar a hash e não a string pura no banco
+
   def call(%{password: password} = params) when is_bitstring(password) do
     with completed_params <- Map.put_new(params, :identifier, UUID.uuid4()),
          {:ok, changeset} <- User.changeset(completed_params),

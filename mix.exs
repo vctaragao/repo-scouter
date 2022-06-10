@@ -46,7 +46,8 @@ defmodule RepoScouter.MixProject do
       {:hackney, "~> 1.17"},
       {:tarams, "~> 1.0.0"},
       {:mox, "~> 1.0", only: :test},
-      {:elixir_uuid, "~> 1.2"}
+      {:elixir_uuid, "~> 1.2"},
+      {:bcrypt_elixir, "~> 3.0"}
     ]
   end
 

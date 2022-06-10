@@ -2,16 +2,19 @@ defmodule RepoScouter.User do
   use Ecto.Schema
 
   import Ecto.Changeset
+  import Bcrypt
 
   alias Ecto.Changeset
 
-  @fields [:identifier, :password]
+  @fields [:identifier, :password, :password_hash]
+  @required_field @fields -- [:password_hash]
 
   @derive {Jason.Encoder, only: [:identifier]}
 
   schema "user" do
     field :identifier, :string
     field :password, :string
+    field :password_hash, :string
 
     timestamps()
   end
@@ -19,7 +22,8 @@ defmodule RepoScouter.User do
   def changeset(params) do
     %__MODULE__{}
     |> cast(params, @fields)
-    |> validate_required(@fields)
+    |> validate_required(@required_field)
+    |> change(add_hash(params[:password]))
     |> handler_changeset()
   end
 
