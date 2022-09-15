@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :repo_scouter, RepoScouter.Repo,
-  username: "repo",
-  password: "123456789",
+  username: "postgres",
+  password: "postgres",
   hostname: "localhost",
   database: "repo_scouter",
   show_sensitive_data_on_connection_error: true,

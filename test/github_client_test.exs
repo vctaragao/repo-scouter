@@ -6,7 +6,7 @@ defmodule RepoScouter.GithubClientTest do
   describe "get_repos/1" do
     test "When given a valid username return their repos" do
       assert {:ok, repos} = Client.get_repos("vctaragao")
-      assert 21 == length(repos)
+      assert 22 == length(repos)
     end
 
     test "When given an invalid username return an error" do
